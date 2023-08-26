@@ -28,6 +28,10 @@
               th:field="*{description}"
               placeholder="Description"
             />
+            <span
+              th:if="${#fields.hasErrors('description')}"
+              th:errors="*{description}"
+            ></span>
           </div>
 
           <button class="btn btn-success" type="submit">Add Todo</button>
